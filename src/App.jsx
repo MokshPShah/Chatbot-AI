@@ -37,10 +37,10 @@ function App() {
     setMessages(updatedMessages);
     setQuestion("");
 
-    const API_KEY = "AIzaSyCEf0-L1ohTfQGudcQRh-BSbNQQLg6lquU";
+    const API_KEY = "AIzaSyCO2MUVQ-XnWqnfABMeQ3qabB4aSB0VLBo";
     try {
       const response = await axios.post(
-        `https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=${API_KEY}`,
+        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`,
         {
           contents: [{ parts: [{ text: question }] }]
         },
