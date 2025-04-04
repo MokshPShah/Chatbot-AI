@@ -51,7 +51,7 @@ function App() {
 
       let aiResponse = response.data?.candidates?.[0]?.content?.parts?.[0]?.text || "No response from AI";
 
-      if (/who made you/i.test(question) || /who created you/i.test(question) || /who made you ?/i.test(question) || /who created you ?/i.test(question) || /who created u/i.test(question) || /who made u/i.test(question) || /who created u?/i.test(question) || /who made u?/i.test(question)) {
+      if (/who made you/i.test(question) || /who are you?/i.test(question) || /who created you/i.test(question) || /who made you ?/i.test(question) || /who created you ?/i.test(question) || /who created u/i.test(question) || /who made u/i.test(question) || /who created u?/i.test(question) || /who made u?/i.test(question)) {
         aiResponse = "I am large language model, trained by Moksh Shah!";
       } else if (/when were you created/i.test(question) || /when did you start/i.test(question)) {
         aiResponse = "I was set up by Moksh Shah on February 21, 2025!";
