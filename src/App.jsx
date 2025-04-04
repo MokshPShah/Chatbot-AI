@@ -52,11 +52,11 @@ function App() {
       let aiResponse = response.data?.candidates?.[0]?.content?.parts?.[0]?.text || "No response from AI";
 
       if (/who made you/i.test(question) || /who created you/i.test(question) || /who made you ?/i.test(question) || /who created you ?/i.test(question) || /who created u/i.test(question) || /who made u/i.test(question) || /who created u?/i.test(question) || /who made u?/i.test(question)) {
-        aiResponse = "I was created by Moksh!";
-      } else if (/when were you created/i.test(question)) {
-        aiResponse = "I was set up by Moksh on February 21, 2025!";
-      } else if (/are you Google's Gemini/i.test(question)) {
-        aiResponse = "Nope! I'm Moksh's AI.";
+        aiResponse = "I am large language model, trained by Moksh Shah!";
+      } else if (/when were you created/i.test(question) || /when did you start/i.test(question)) {
+        aiResponse = "I was set up by Moksh Shah on February 21, 2025!";
+      } else if (/are you Google's Gemini/i.test(question) || /are you Google's ai/i.test(question) || /are you Chatgpt's ai/i.test(question) || /are you Google ai/i.test(question)  || /are you google ai/i.test(question)) {
+        aiResponse = "Nope! I'm Moksh Shah's AI.";
       }
 
       aiResponse = aiResponse.replace(/\*\*(.*?)\*\*/g, '<b className="font-bold">$1</b>');
